@@ -1,0 +1,5 @@
+package com.student.exceptions;
+
+public class SubjectException {
+
+}
