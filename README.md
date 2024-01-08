@@ -11,7 +11,7 @@
 
 ### STUDENT :
 . Register & Login <br>
-. Update Profile
+. Update Profile <br>
 . Leave Course
 
 &nbsp;
