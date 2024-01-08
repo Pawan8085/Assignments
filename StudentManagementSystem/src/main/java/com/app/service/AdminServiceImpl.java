@@ -36,10 +36,11 @@ public class AdminServiceImpl implements AdminService {
 	private PasswordEncoder passwordEncoder;
 
 	@Override
-	public Admin registerAdmin(Admin admin) {
+	public String registerAdmin(Admin admin) {
 		
 		admin.setPassword(passwordEncoder.encode(admin.getPassword()));
-		return adminRepo.save(admin);
+		 adminRepo.save(admin);
+		 return "You have registered successfully";
 	}
 
 	@Override

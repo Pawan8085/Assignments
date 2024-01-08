@@ -15,9 +15,9 @@ public interface AdminService {
 	/**
 	 * 
 	 * @param admin -> Admin object for registration
-	 * @return -> saved admin obj
+	 * @return -> registration confirmation message
 	 */
-	Admin registerAdmin(Admin admin);
+	String registerAdmin(Admin admin);
 	
 	/**
 	 * 

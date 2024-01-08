@@ -12,9 +12,9 @@ public interface StudentService {
 	/**
 	 * 
 	 * @param student -> student obj to save student
-	 * @return -> saved student
+	 * @return -> registration confirmation message
 	 */
-	Student registerStudent(Student student);
+	String registerStudent(Student student);
 	
 	/**
 	 * 

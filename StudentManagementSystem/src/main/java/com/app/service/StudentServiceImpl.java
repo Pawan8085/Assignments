@@ -30,10 +30,12 @@ public class StudentServiceImpl implements StudentService {
 	
 	
 	@Override
-	public Student registerStudent(Student student) {
+	public String registerStudent(Student student) {
 		
 		student.setPassword(passwordEncoder.encode(student.getPassword()));
-		return studentRepo.save(student);
+		 studentRepo.save(student);
+		 
+		 return "You have registered successfully";
 		
 	}
 

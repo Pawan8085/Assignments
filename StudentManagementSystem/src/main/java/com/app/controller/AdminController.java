@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.app.dto.AdminDTO;
 import com.app.model.Admin;
 import com.app.model.Course;
 import com.app.model.Student;
@@ -26,10 +27,11 @@ public class AdminController {
 	
 	
 	@PostMapping("/admin/register")
-	public ResponseEntity<Admin> saveAdminHandler(@RequestBody Admin admin){
+	public ResponseEntity<String> saveAdminHandler(@RequestBody AdminDTO admindto){
 		
-		Admin savedAdmin = adminService.registerAdmin(admin);
-		return new ResponseEntity<Admin>(savedAdmin, HttpStatus.CREATED);
+		Admin admin = convertAdminDtoToAdmin(admindto);
+		String msg = adminService.registerAdmin(admin);
+		return new ResponseEntity<String>(msg, HttpStatus.CREATED);
 		
 	}
 	
@@ -68,6 +70,20 @@ public class AdminController {
 		
 		Set<Student> students = adminService.getStudentByName(name);
 		return new ResponseEntity<Set<Student>>(students, HttpStatus.OK);
+	}
+	
+	
+	
+	public Admin convertAdminDtoToAdmin(AdminDTO admindto) {
+		
+		Admin admin = new Admin();
+		admin.setName(admindto.getName());
+		admin.setEmail(admindto.getEmail());
+		admin.setPassword(admindto.getPassword());
+		admin.setSchoolName(admindto.getSchoolName());
+		
+		return admin;
+		
 	}
 	
 
