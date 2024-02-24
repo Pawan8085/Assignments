@@ -1,14 +1,14 @@
-# E-Commerce <br>
+# Vacation Rental Platform <br>
 
 ## Introduction
-"REST API for an E-Commerce Application Using Spring Boot. It allows sellers to sell their products and users to buy them. It includes functionalities such as user sign-up and login, seller sign-up and login, Categories, Products, Product Search, Purchase product, Cart, and Orders." 
+"Vacation Rental Platform built using Spring MVC, allowing users to buy and sell their properties. It features signup and login functionalities, property search, filtering by location, property type, and host, as well as sorting properties by location and property type. Users can also book properties and add comments and ratings."
 
 ## Project Type
-Backend
+Frontend | Backend | Fullstack
 
 ## Directory Structure
 ```
-E-Commerce
+VacationRentalPlatform
 ├── src
 │   └── main
 │       ├── java
@@ -16,34 +16,45 @@ E-Commerce
 │       │       └── app
 │       │               ├── config
 │       │               ├── controller
-│       │               ├── dto
 │       │               ├── entities
-│       │               ├── exceptions
+│       │               ├── helper
 │       │               ├── repository
 │       │               └── service
 │       └── resources
+│           ├── static
+│           │   ├── css
+│           │   ├── images
+│           │   └── js
+│           └── templates
+│               ├── guest
+│               └── host
 ├── src
 │   └── test
 └── pom.xml
+
 ``` 
 
 ## Features
-#### Seller :
-- Seller SignUp
-- Seller Login
-- Add Category
-- Add Product
+#### Host :
+- Host Sign-Up & Login
+- Change Password
+- Update Profile
+- Add, Update, Delete & View Property 
+- Search Property With Pagination
+- View Property Reviews
  #### User :
-- User SignUp
-- User Login
-- Buy Product
-- Add to Cart
-- Search Product
-- View Cart Items
-- View Orders
+- User SignUp & Login
+- Change Password
+- Update Profile
+- Search Property With Pagination
+- Property Filtering & Sorting
+- Buy Property For Rent
+- Add Ratings & Comments to Property
+- View Bookings
 
 ## Technology Stack
 - Spring Boot
 - Hibernate
 - MySql Database
 - Spring Security
+- Thymeleaf
