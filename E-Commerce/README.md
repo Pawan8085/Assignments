@@ -1,100 +1,49 @@
-# Rest Api For Student Management System
+# E-Commerce <br>
+
+## Introduction
+"REST API for an E-Commerce Application Using Spring Boot. It allows sellers to sell their products and users to buy them. It includes functionalities such as user sign-up and login, seller sign-up and login, Categories, Products, Product Search, Purchase product, Cart, and Orders." 
+
+## Project Type
+Backend
+
+## Directory Structure
+```
+E-Commerce
+├── src
+│   └── main
+│       ├── java
+│       │   └── com
+│       │       └── app
+│       │               ├── config
+│       │               ├── controller
+│       │               ├── dto
+│       │               ├── entities
+│       │               ├── exceptions
+│       │               ├── repository
+│       │               └── service
+│       └── resources
+├── src
+│   └── test
+└── pom.xml
+``` 
 
 ## Features
-### ADMIN :
-. Register & Login <br>
-. Admit Students <br>
-. Add Courses <br>
-. Assign Courses To Students <br>
-. Check Students In Particular Course <br>
-. Search Student <br>
+#### Seller :
+- Seller SignUp
+- Seller Login
+- Add Category
+- Add Product
+ #### User :
+- User SignUp
+- User Login
+- Buy Product
+- Add to Cart
+- Search Product
+- View Cart Items
+- View Orders
 
-### STUDENT :
-. Register & Login <br>
-. Update Profile <br>
-. Leave Course
-
-&nbsp;
-### APIS FOR ADMIN
-#### Register Admin 
-`POST`
-```
-http://localhost:8080/app/admin/register
-
-```
-#### Login Admin
-`POST`
-```
-http://localhost:8080/app/admin/signIn
-
-```
-#### Add Course
-`POST`
-```
-http://localhost:8080/app/admin/course
-
-```
-#### Admit Student
-`POST`
-```
-http://localhost:8080/app/admin/admit/{studentCode}
-
-```
-#### Assign Course 
-`POST`
-```
-http://localhost:8080/app/admin/course/{courseId}/{studentCode}
-
-```
-#### Search Student By Course
-`GET`
-```
-http://localhost:8080/app/admin/course/{courseId}
-
-```
-#### Search Student By Name
-`GET`
-```
-http://localhost:8080/app/admin/students/{name}
-
-```
-
-&nbsp;
-### APIS FOR STUDENT
-#### Register Student 
-`POST`
-```
-http://localhost:8080/app/student/register
-
-```
-#### Login Student
-`POST`
-```
-http://localhost:8080/app/student/signIn
-
-```
-#### Update Student Profile
-`PUT`
-```
-http://localhost:8080/app/student/update
-
-```
-#### Get Student Courses
-`GET`
-```
-http://localhost:8080/app/student/course
-
-```
-#### Leave Course
-`DELETE`
-```
-http://localhost:8080/app/student/leave/{courseId}
-
-```
-
-
-
-
-
-
-
+## Technology Stack
+- Spring Boot
+- Hibernate
+- MySql Database
+- Spring Security
